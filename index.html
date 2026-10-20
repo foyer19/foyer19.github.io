@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foyer St Paul 19</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; text-align: center; color: #333; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        #sommaireDates { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px; margin: 20px auto; max-width: 500px; text-align: left; }
+        #sommaireDates h2 { margin-top: 0; font-size: 1.2em; color: #856404; text-align: center; }
+        #sommaireDates ul { list-style: none; padding: 0; margin: 0; }
+        #sommaireDates li { margin-bottom: 5px; border-bottom: 1px dashed #decba1; padding-bottom: 5px; }
+
+        #listeActivites { display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 20px; }
+        .card { width: 350px; background: white; border: 80px solid #ddd; border-radius: 120px; overflow: hidden; position: relative; }
+        .card img { width: 100%; height: auto; display: block; }
+        .card-body { padding: 15px; }
+        .badge-complet { position: absolute; top: 200px; left: 90px; background: red; color: white; padding: 10px 15px; font-weight: bold; border-radius: 5px; z-index: 10;font-size: 1.5em; }
+        
+        .progress-bg { background: #eee; height: 12px; border-radius: 6px; margin: 10px 0; overflow: hidden; }
+        .progress-bar { height: 100%; transition: width 0.5s; }
+
+        .compte-rendu { text-align: left; padding: 20px; line-height: 1.6; border-top: 2px solid #007bff; margin-top: 20px; }
+        
+        footer { margin-top: 50px; padding: 20px; border-top: 1px solid #ddd; color: #666; }
+        .compteur-img { margin-top: 10px; max-width: 150px; height: auto; }
+        .github-link { display: flex; align-items: center; justify-content: center; gap: 5px; color: #666; text-decoration: none; font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Foyer St Paul Corrèze</h1>
+        
+        <div id="sommaireDates">
+            <h2>📅 Calendrier 2027</h2>
+            <ul id="listeDates"></ul>
+        </div>
+
+        <div style="background-color: #f1f3f5; border: 2px solid #dee2e6; border-radius: 12px; padding: 20px; margin: 20px 0;">
+            <p style="margin-top: 0; font-weight: bold; font-size: 1.1em;">📝 Réservations & Infos</p>
+            
+            <a href="https://www.facebook.com/share/1HM1gQCDfu/" target="_blank" style="display: inline-block; background-color: #1877F2; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-bottom: 15px;">
+    Voir notre page Facebook
+        </a>
+            
+
+            <div style="font-size: 1.3em; font-weight: bold; color: #333;">
+                📞 Appelez le : <a href="tel:0683219538" style="color: #28a745; text-decoration: none;">06 83 21 95 38</a>
+            </div>
+            <p style="color: #d9534f; font-size: 0.9em; margin-top: 10px; font-weight: bold;">(Réservations uniquement par téléphone)</p>
+        </div>
+
+        <div id="listeActivites"></div>
+    </div>
+
+    <div class="container">
+        <div class="compte-rendu">
+            <h2>📜 Assemblée Générale samedi 25 octobre2025</h2>
+            <p>Désignation du secrétaire de l'assemblée</p>
+            <p>la municipalité est représentée par Madame le Maire</p>
+            <p>présents: 11 excusés: 4 absents non excusés: 2</p>
+            <p>L'année 2025 a été vierge de toutes activités, il a été procédé à la modification des statuts notamment les articles 9-10-11-13-20, lesquels ont été approuvés</p>
+        </p>
+            <p>élection du nouveau bureau, l'ancien président créateur du foyer est nommé Membre d'Honneur</p>
+            <p> Les activités seront au nombre de quatre ( voir le calendrier en haut de la page</p>
+            <p> Vu le président</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="annee"></span> Foyer St Paul 19</p>
+        <div>
+            <img class="compteur-img" src="https://komarev.com/ghpvc/?username=foyer19-FoyerStPaul19&color=blue&style=flat&label=VISITES" alt="Compteur">
+        </div>
+        
+        <a href="https://github.com" target="_blank" class="github-link">
+            Propulsé par 
+            <svg height="16" viewBox="0 0 16 16" width="16" style="fill: #666;">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            GitHub Pages
+        </a>
+    </footer>
+
+    <script>
+        document.getElementById('annee').textContent = new Date().getFullYear();
+
+        const mesActivites = [
+            { titre: "Fête du village", date: "Samedi 17 et dimanche 18 Juillet 2027", image: "", inscrits: 00, quota: 300 },
+            { titre: "Burger frites", date: "Samedi 5 Juin 2027", image: "", inscrits: 0, quota: 240 },
+            { titre: "Moules frites karaoké", date: "Samedi 17 Avril 2027", image: "", inscrits: 0, quota: 240 },
+            { titre: "Aligot saucisse", date: "Samedi 20 Février 2027", image: "", inscrits: 0, quota: 150 } ,
+            ];
+
+        const container = document.getElementById('listeActivites');
+        const sommaire = document.getElementById('listeDates');
+
+        if(container && sommaire) {
+            container.innerHTML = ""; 
+            sommaire.innerHTML = "";
+
+            mesActivites.forEach(function(act) {
+                sommaire.innerHTML += '<li><b>' + act.date + '</b> : ' + act.titre + '</li>';
+
+                const pourcentage = Math.min((act.inscrits / act.quota) * 100, 100);
+                let couleurJauge = "#28a745"; 
+                if (pourcentage > 70) couleurJauge = "#ffc107"; 
+                if (pourcentage >= 100) couleurJauge = "#dc3545"; 
+
+                var badge = (act.inscrits >= act.quota) ? '<div class="badge-complet">COMPLET</div>' : '';
+                
+                var carte = '<div class="card">' +
+                            badge +
+                            '<img src="' + act.image + '" alt="' + act.titre + '">' +
+                            '<div class="card-body">' +
+                            '<h3>' + act.titre + '</h3>' +
+                            '<p style="color:#d9534f; font-weight:bold; margin:0;">' + act.date + '</p>' +
+                            '<div class="progress-bg"><div class="progress-bar" style="width:'+pourcentage+'%; background:'+couleurJauge+';"></div></div>' +
+                            '<p style="margin:0; font-size:0.9em;">Places : ' + act.inscrits + ' / ' + act.quota + '</p>' +
+                            '</div>' +
+                            '</div>';
+                container.innerHTML += carte;
+            });
+        }
+    </script>
+</body>
+</html>
