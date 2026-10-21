@@ -40,7 +40,6 @@
         .visit-counter strong {
             font-size: 1.2em;
         }
-        .compteur-img { margin-top: 10px; max-width: 180px; height: auto; display: inline-block; }
         .github-link { display: flex; align-items: center; justify-content: center; gap: 5px; color: #666; text-decoration: none; font-weight: bold; margin-top: 10px; }
     </style>
 </head>
@@ -88,11 +87,7 @@
 
         <div class="visit-counter">
             <span>Visites :</span>
-            <strong id="visit-count">...</strong>
-        </div>
-
-        <div>
-            <img class="compteur-img" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ffoyer19.github.io&count_bg=%2300aaff&count_text=%23ffffff&label=visits" alt="Compteur de visites du site Foyer St Paul 19">
+            <strong id="visit-count">0</strong>
         </div>
         
         <a href="https://github.com" target="_blank" class="github-link">
@@ -147,15 +142,19 @@
 
         fetch('https://api.countapi.xyz/hit/foyer19.github.io/visits')
             .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('API inaccessible');
+                }
                 return response.json();
             })
             .then(function(data) {
                 const countEl = document.getElementById('visit-count');
-                if (countEl) {
+                if (countEl && typeof data.value !== 'undefined') {
                     countEl.textContent = Number(data.value).toLocaleString('fr-FR');
                 }
             })
-            .catch(function() {
+            .catch(function(error) {
+                console.error('Compteur non disponible:', error);
                 const countEl = document.getElementById('visit-count');
                 if (countEl) {
                     countEl.textContent = '0';
