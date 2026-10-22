@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
       titre: 'Burger frites',
       date: 'Samedi 5 Juin 2027',
       image: 'Burger.jpeg',
-      inscrits: 50,
+      inscrits: 240,
       quota: 240,
       color: 'linear-gradient(135deg, #2563eb 0%, #06b6d4 100%)'
     },
