@@ -1,106 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Foyer St Paul Corrèze - site des activités, réservations et informations.">
-    <title>Foyer St Paul 19</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Foyer St Paul Corrèze - calendrier, activités et informations.">
+  <title>Foyer St Paul 19</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="topbar">
-        <div class="container topbar-inner">
-            <div class="brand" aria-label="Foyer St Paul Corrèze">
-                <span class="brand-mark">Foyer</span>
-                <span class="brand-text">St Paul Corrèze</span>
-            </div>
-            <nav class="nav" aria-label="Navigation principale">
-                <a href="#calendar">Calendrier</a>
-                <a href="#activities">Événements</a>
-                <a href="#report">Assemblée</a>
-            </nav>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand" aria-label="Foyer St Paul Corrèze">
+        <span class="brand-mark">Foyer</span>
+        <span class="brand-text">St Paul Corrèze</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#calendar">Calendrier</a>
+        <a href="#activities">Événements</a>
+        <a href="#report">Assemblée</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Association locale</p>
+        <h1>Foyer St Paul Corrèze</h1>
+        <p class="lead">
+          Une page dédiée aux activités, aux réservations et aux événements de l'association.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:0683219538">📞 Appeler</a>
+          <a class="btn btn-secondary" href="https://www.facebook.com/share/1HM1gQCDfu/" target="_blank" rel="noreferrer">💬 Facebook</a>
         </div>
-    </header>
+      </div>
 
-    <main class="container page">
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">Association locale</p>
-                <h1>Foyer St Paul Corrèze</h1>
-                <p class="lead">
-                    Une page dédiée aux activités, aux réservations et aux événements de l'association.
-                </p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="tel:0683219538">📞 Appeler</a>
-                    <a class="btn btn-secondary" href="https://www.facebook.com/share/1HM1gQCDfu/" target="_blank" rel="noreferrer">💬 Facebook</a>
-                </div>
-            </div>
+      <aside class="info-panel panel">
+        <h2>Réservations & infos</h2>
+        <a class="facebook-link" href="https://www.facebook.com/share/1HM1gQCDfu/" target="_blank" rel="noreferrer">
+          Voir notre page Facebook
+        </a>
 
-            <aside class="info-panel panel">
-                <h2>Réservations & infos</h2>
-                <a class="facebook-link" href="https://www.facebook.com/share/1HM1gQCDfu/" target="_blank" rel="noreferrer">
-                    Voir notre page Facebook
-                </a>
-                <div class="phone-line">
-                    <span>📞 Appelez le :</span>
-                    <a href="tel:0683219538">06 83 21 95 38</a>
-                </div>
-                <p class="warning">Réservations uniquement par téléphone</p>
-            </aside>
-        </section>
-
-        <section id="calendar" class="panel calendar-panel">
-            <div class="section-header">
-                <p class="eyebrow">Agenda</p>
-                <h2>Calendrier 2027</h2>
-            </div>
-            <ul id="listeDates" class="date-list" aria-live="polite"></ul>
-        </section>
-
-        <section id="activities" class="activities-section">
-            <div class="section-header centered">
-                <p class="eyebrow">Programme</p>
-                <h2>Nos événements</h2>
-            </div>
-            <div id="listeActivites" class="cards-grid" aria-live="polite"></div>
-        </section>
-
-        <section id="report" class="panel report-panel">
-            <div class="section-header">
-                <p class="eyebrow">Compte rendu</p>
-                <h2>Assemblée générale samedi 25 octobre 2025</h2>
-            </div>
-            <div class="report-content">
-                <p>Désignation du secrétaire de l'assemblée.</p>
-                <p>La municipalité est représentée par Madame le Maire.</p>
-                <p>Présents : 11, excusés : 4, absents non excusés : 2.</p>
-                <p>L'année 2025 a été vierge de toutes activités ; il a été procédé à la modification des statuts, notamment les articles 9-10-11-13-20, lesquels ont été approuvés.</p>
-                <p>Élection du nouveau bureau ; l'ancien président créateur du foyer est nommé Membre d'Honneur.</p>
-                <p>Les activités seront au nombre de quatre (voir le calendrier en haut de la page).</p>
-                <p>Vu le président.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© <span id="annee"></span> Foyer St Paul 19</p>
-
-            <div class="visit-counter" aria-label="Nombre de visites">
-                <span>Visites :</span>
-                <strong id="visit-count">0</strong>
-            </div>
-
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="github-link">
-                Propulsé par
-                <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87 1.87 3.14 1.87 1.39 0 2.56-.11 3.15-.8.22-.36.4-.86.4-1.74 0-.69-.01-2.02-.01-3.32 0-.71-.24-1.16-.54-1.4.58-.06 1.2-.24 1.55-.92.28-.75.12-1.32.06-1.45-.18-.06-.79.2-1.34.78-.38-.11-.78-.17-1.17-.17-.4 0-.79.06-1.17.17-.55-.58-1.16-.84-1.34-.78-.06.13-.22.7.06 1.45.35.68.96.86 1.54.92-.31.24-.54.69-.54 1.4 0 1.3.01 2.62.01 3.32 0 .88.18 1.38.4 1.74.59.69 1.76.8 3.15.8 1.27 0 2.42-.46 3.14-1.87.36-.56.73-.96.73-1.72v-3.4c0-.93-.34-1.56-.86-1.93.63-.06 1.22-.26 1.58-.75.38-.52.33-1.26-.09-1.9-.8.02-1.47.25-2.03.7-.7-.18-1.44-.27-2.25-.27-.81 0-1.55.09-2.25.27-.54-.44-1.23-.68-2.03-.7-.42.64-.47 1.38-.09 1.9.36.49.95.69 1.58.75-.52.37-.86 1-.86 1.93v3.4c0 .76.37 1.16.73 1.72.72 1.41 1.87 1.87 3.14 1.87.39 0 .78-.06 1.17-.17.58-.38 1.08-.78 1.34-.78.06.13.22.7-.06 1.45-.35.68-.96.86-1.54.92.31.24.54.69.54 1.4 0 1.3-.01 2.62-.01 3.32 0 .22.15.45.55.38A8.02 8.02 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-                GitHub Pages
-            </a>
+        <div class="phone-line">
+          <span>📞 Appelez le :</span>
+          <a href="tel:0683219538">06 83 21 95 38</a>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <p class="warning">Réservations uniquement par téléphone</p>
+      </aside>
+    </section>
+
+    <section id="calendar" class="panel calendar-panel">
+      <div class="section-header">
+        <p class="eyebrow">Agenda</p>
+        <h2>Calendrier 2027</h2>
+      </div>
+      <ul id="listeDates" class="date-list" aria-live="polite"></ul>
+    </section>
+
+    <section id="activities" class="activities-section">
+      <div class="section-header centered">
+        <p class="eyebrow">Programme</p>
+        <h2>Nos événements</h2>
+      </div>
+      <div id="listeActivites" class="cards-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="report" class="panel report-panel">
+      <div class="section-header">
+        <p class="eyebrow">Compte rendu</p>
+        <h2>Assemblée générale samedi 25 octobre 2025</h2>
+      </div>
+
+      <div class="report-content">
+        <p>Désignation du secrétaire de l'assemblée.</p>
+        <p>La municipalité est représentée par Madame le Maire.</p>
+        <p>Présents : 11, excusés : 4, absents non excusés : 2.</p>
+        <p>L'année 2025 a été vierge de toutes activités ; il a été procédé à la modification des statuts, notamment les articles 9-10-11-13-20, lesquels ont été approuvés.</p>
+        <p>Élection du nouveau bureau ; l'ancien président créateur du foyer est nommé Membre d'Honneur.</p>
+        <p>Les activités seront au nombre de quatre (voir le calendrier en haut de la page).</p>
+        <p>Vu le président.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="annee"></span> Foyer St Paul 19</p>
+
+      <div class="visit-counter" aria-label="Nombre de visites">
+        <span>Visites :</span>
+        <strong id="visit-count">0</strong>
+      </div>
+
+      <a href="https://github.com" target="_blank" rel="noreferrer" class="github-link">
+        Propulsé par
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87 1.87 3.14 1.87 1.39 0 2.56-.11 3.15-.8.22-.36.4-.86.4-1.74 0-.69-.01-2.02-.01-3.32 0-.71-.24-1.16-.54-1.4.58-.06 1.2-.24 1.55-.92.28-.75.12-1.32.06-1.45-.18-.06-.79.2-1.34.78-.38-.11-.78-.17-1.17-.17-.4 0-.79.06-1.17.17-.55-.58-1.16-.84-1.34-.78-.06.13-.22.7.06 1.45.35.68.96.86 1.54.92-.31.24-.54.69-.54 1.4 0 1.3.01 2.62.01 3.32 0 .88.18 1.38.4 1.74.59.69 1.76.8 3.15.8 1.27 0 2.42-.46 3.14-1.87.36-.56.73-.96.73-1.72v-3.4c0-.93-.34-1.56-.86-1.93.63-.06 1.22-.26 1.58-.75.38-.52.33-1.26-.09-1.9-.8.02-1.47.25-2.03.7-.7-.18-1.44-.27-2.25-.27-.81 0-1.55.09-2.25.27-.54-.44-1.23-.68-2.03-.7-.42.64-.47 1.38-.09 1.9.36.49.95.69 1.58.75-.52.37-.86 1-.86 1.93v3.4c0 .76.37 1.16.73 1.72.72 1.41 1.87 1.87 3.14 1.87.39 0 .78-.06 1.17-.17.58-.38 1.08-.78 1.34-.78.06.13.22.7-.06 1.45-.35.68-.96.86-1.54.92.31.24.54.69.54 1.4 0 1.3-.01 2.62-.01 3.32 0 .22.15.45.55.38A8.02 8.02 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        GitHub Pages
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
