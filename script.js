@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('annee').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('annee');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
   const mesActivites = [
     {
@@ -47,7 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const dateParts = act.date.match(/(\d{1,2})\s+(.*?)(\d{4})/i);
       const day = dateParts ? dateParts[1] : '';
       const month = dateParts ? dateParts[2].trim() : '';
-      sommaire.innerHTML += '<li><strong>' + day + '</strong><span>' + month + '</span></li>';
+
+      sommaire.innerHTML +=
+        '<li>' +
+        '<strong>' + day + '</strong>' +
+        '<span>' + month + '</span>' +
+        '<small>' + act.titre + '</small>' +
+        '</li>';
 
       const pourcentage = Math.min((act.inscrits / act.quota) * 100, 100);
       let couleurJauge = '#22c55e';
@@ -59,7 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const eventCard = document.createElement('article');
       eventCard.className = 'event-card';
-      eventCard.innerHTML = badge +
+
+      eventCard.innerHTML =
+        badge +
         '<div class="event-poster" aria-hidden="true">' +
         '<div>' +
         '<p class="poster-title">' + act.titre + '</p>' +
