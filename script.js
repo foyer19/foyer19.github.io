@@ -1,10 +1,10 @@
 document.getElementById('annee').textContent = new Date().getFullYear();
 
 const mesActivites = [
-  { titre: 'Fête du village', date: 'Samedi 17 et dimanche 18 Juillet 2027', image: '', inscrits: 0, quota: 300 },
-  { titre: 'Burger frites', date: 'Samedi 5 Juin 2027', image: '', inscrits: 0, quota: 240 },
-  { titre: 'Moules frites karaoké', date: 'Samedi 17 Avril 2027', image: '', inscrits: 0, quota: 240 },
-  { titre: 'Aligot saucisse', date: 'Samedi 20 Février 2027', image: '', inscrits: 0, quota: 150 }
+  { titre: 'Fête du village', date: 'Samedi 17 et dimanche 18 Juillet 2027', image: '', inscrits: 100, quota: 300 },
+  { titre: 'Burger frites', date: 'Samedi 5 Juin 2027', image: '', inscrits: 50, quota: 240 },
+  { titre: 'Moules frites karaoké', date: 'Samedi 17 Avril 2027', image: '', inscrits: 90, quota: 240 },
+  { titre: 'Aligot saucisse', date: 'Samedi 20 Février 2027', image: '', inscrits: 29, quota: 150 }
 ];
 
 const container = document.getElementById('listeActivites');
