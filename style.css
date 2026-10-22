@@ -283,12 +283,12 @@ h1 {
 }
 
 .date-list li strong {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #3b2d10;
 }
 
 .date-list li small {
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.4;
   opacity: 0.9;
 }
