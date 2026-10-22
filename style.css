@@ -258,22 +258,19 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  padding-bottom: 8px;
 }
 
 .date-list li {
-  min-width: 180px;
+  min-width: 0;
   background: linear-gradient(180deg, #fffaf0 0%, #fef2c7 100%);
   border: 1px solid #f7d98f;
   border-radius: 18px;
   padding: 16px 18px;
   color: #7a5300;
   font-weight: 700;
-  flex: 0 0 auto;
   box-shadow: 0 8px 18px rgba(245, 158, 11, 0.08);
 }
 
@@ -493,8 +490,8 @@ h1 {
     width: 100%;
   }
 
-  .date-list li {
-    min-width: 160px;
+  .date-list {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {

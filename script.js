@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (pourcentage >= 100) couleurJauge = '#ef4444';
 
       const badge = act.inscrits >= act.quota ? '<div class="badge-complet">Complet</div>' : '';
-      const posterStyle = act.image ? 'background-image: url("' + act.image + '");' : 'background: ' + act.color + ';';
 
-      const carte = '<article class="event-card">' +
-        badge +
-        '<div class="event-poster" style="' + posterStyle + '">' +
+      const eventCard = document.createElement('article');
+      eventCard.className = 'event-card';
+      eventCard.innerHTML = badge +
+        '<div class="event-poster" aria-hidden="true">' +
         '<div>' +
         '<p class="poster-title">' + act.titre + '</p>' +
         '<p class="poster-date">' + act.date + '</p>' +
@@ -69,10 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
         '<div class="card-content">' +
         '<div class="progress-bg"><div class="progress-bar" style="width:' + pourcentage + '%; background:' + couleurJauge + ';"></div></div>' +
         '<div class="card-meta"><span>Places</span><strong>' + act.inscrits + ' / ' + act.quota + '</strong></div>' +
-        '</div>' +
-        '</article>';
+        '</div>';
 
-      container.innerHTML += carte;
+      const poster = eventCard.querySelector('.event-poster');
+      if (act.image) {
+        poster.style.backgroundImage = 'url("' + act.image + '")';
+      } else {
+        poster.style.background = act.color;
+      }
+
+      container.appendChild(eventCard);
     });
   }
 
