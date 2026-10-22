@@ -264,6 +264,9 @@ h1 {
 }
 
 .date-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   min-width: 0;
   background: linear-gradient(180deg, #fffaf0 0%, #fef2c7 100%);
   border: 1px solid #f7d98f;
@@ -271,14 +274,23 @@ h1 {
   padding: 16px 18px;
   color: #7a5300;
   font-weight: 700;
-  box-shadow: 0 8px 18px rgba(245, 158, 11, 0.08);
+}
+
+.date-list li strong,
+.date-list li span,
+.date-list li small {
+  display: block;
 }
 
 .date-list li strong {
-  display: block;
   font-size: 1.2rem;
   color: #3b2d10;
-  margin-bottom: 4px;
+}
+
+.date-list li small {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 .activities-section {
