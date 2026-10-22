@@ -8,32 +8,32 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       titre: 'Fête du village',
       date: 'Samedi 17 et dimanche 18 Juillet 2027',
-      image: 'fete2026.jpg',
-      inscrits: 100,
+      image: '',
+      inscrits: 0,
       quota: 300,
       color: 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)'
     },
     {
       titre: 'Burger frites',
       date: 'Samedi 5 Juin 2027',
-      image: 'Burger.jpeg',
-      inscrits: 240,
+      image: '',
+      inscrits: 0,
       quota: 240,
       color: 'linear-gradient(135deg, #2563eb 0%, #06b6d4 100%)'
     },
     {
       titre: 'Moules frites karaoké',
       date: 'Samedi 17 Avril 2027',
-      image: 'moulesfrites.jpg',
-      inscrits: 90,
+      image: '',
+      inscrits: 0,
       quota: 240,
       color: 'linear-gradient(135deg, #ef4444 0%, #f97316 100%)'
     },
     {
       titre: 'Aligot saucisse',
       date: 'Samedi 20 Février 2027',
-      image: 'aligot.jpg',
-      inscrits: 29,
+      image: '',
+      inscrits: 0,
       quota: 150,
       color: 'linear-gradient(135deg, #10b981 0%, #14b8a6 100%)'
     }
